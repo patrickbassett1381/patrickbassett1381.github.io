@@ -87,7 +87,7 @@ header{padding-block:28px 0}
 .band{fill:none;stroke:var(--line);stroke-width:1}
 .band.main{fill:var(--gold);fill-opacity:.08;stroke:var(--accent);stroke-width:1.5}
 .sheet .sub{font-size:11.5px;fill:var(--muted)}
-.n-unit .sub{fill:#cfe0f2}
+.n-unit .sub{fill:#cfe0f2;font-weight:400}
 .arch{margin:28px 0 0}
 
 /* Sections */
@@ -179,7 +179,7 @@ footer{padding-block:48px 40px;margin-top:40px;border-top:1px solid var(--line);
 
 <div class="hero">
   <h1>I build the systems<br>that run my <span>MBA</span>.</h1>
-  <p class="lede">Chemical engineer turned strategy analyst, now automating school, recruiting and life with AI. I design each workflow, then build it with Claude as a coding partner. <strong>Below is the whole system as one process flow sheet</strong>, followed by each unit in detail.</p>
+  <p class="lede">Chemical engineer turned strategy analyst, now automating school and recruiting with AI. I design each workflow, then build it with Claude as a coding partner. <strong>Below is the whole system as one process flow sheet</strong>, followed by each unit in detail.</p>
   <div class="facts">
     <span><b>3</b> live systems</span>
     <span><b>6</b> scheduled jobs</span>
@@ -193,8 +193,8 @@ footer{padding-block:48px 40px;margin-top:40px;border-top:1px solid var(--line);
       <span class="tag">Rev. Oct 2026</span>
     </div>
     <div class="sheet-scroll">
-    <svg viewBox="0 0 780 396" role="img" aria-labelledby="pfd-t">
-      <title id="pfd-t">Sources (bCourses, my class notes, my reMarkable annotations, Panopto, Calendly) feed four automated units that produce a tablet library, course folders, concept logs and prep docs. One manual loop: I import tablet files to my reMarkable, annotate lecture slides, and export them back into the digest. A fifth unit, Workout Helper, is under construction.</title>
+    <svg viewBox="0 0 780 342" role="img" aria-labelledby="pfd-t">
+      <title id="pfd-t">Sources (bCourses, my class notes, my reMarkable annotations, Panopto, Calendly) feed four automated units that produce a tablet library, course folders, concept logs and prep docs. One manual loop: I import tablet files to my reMarkable, annotate lecture slides, and export them back into the digest.</title>
       <defs>
         <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z"/></marker>
         <marker id="arrow-man" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z"/></marker>
@@ -225,8 +225,8 @@ footer{padding-block:48px 40px;margin-top:40px;border-top:1px solid var(--line);
       <path class="edge" d="M440 284 H598" marker-end="url(#arrow)"/>
 
       <!-- manual recycle loop: tablet library -> reMarkable -> digest -->
-      <path class="edge man" d="M750 44 H768 V384 H8 V164 H18" marker-end="url(#arrow-man)"/>
-      <text class="lbl man-lbl" x="390" y="375" text-anchor="middle">MANUAL · import to tablet → annotate slides in class → export to Drive</text>
+      <path class="edge man" d="M750 44 H768 V330 H8 V164 H18" marker-end="url(#arrow-man)"/>
+      <text class="lbl man-lbl" x="390" y="321" text-anchor="middle">MANUAL · import to tablet → annotate slides in class → export to Drive</text>
 
       <!-- feeds -->
       <g class="n-src"><rect x="20" y="24" width="120" height="40"/><text x="80" y="49" text-anchor="middle">bCourses</text></g>
@@ -240,7 +240,6 @@ footer{padding-block:48px 40px;margin-top:40px;border-top:1px solid var(--line);
       <g class="n-unit"><rect x="290" y="84" width="150" height="40"/><text class="id" x="300" y="98">U-201</text><text x="300" y="116">Notes sorter</text></g>
       <g class="n-unit"><rect x="290" y="144" width="150" height="100"/><text class="id" x="300" y="186">U-202</text><text x="300" y="204">Concept Log digest</text></g>
       <g class="n-unit"><rect x="290" y="264" width="150" height="40"/><text class="id" x="300" y="278">U-301</text><text x="300" y="296">Coffee-chat prep</text></g>
-      <g class="n-wip"><rect x="290" y="320" width="150" height="40"/><text class="id" x="300" y="334">U-401 · IN DESIGN</text><text x="300" y="352">Workout Helper</text></g>
 
       <!-- products -->
       <g class="n-out"><rect x="600" y="24" width="150" height="40"/><text x="675" y="49" text-anchor="middle">Tablet library</text></g>
@@ -249,7 +248,7 @@ footer{padding-block:48px 40px;margin-top:40px;border-top:1px solid var(--line);
       <g class="n-out"><rect x="600" y="264" width="150" height="40"/><text x="675" y="289" text-anchor="middle">Prep doc + reminder</text></g>
     </svg>
     </div>
-    <figcaption class="sheet-foot">Black lines run on their own. The gold loop is the one step I do by hand: my tablet only imports files manually, so I pull in slides, annotate them in class, and export them back for the digest. Dashed unit is under construction.</figcaption>
+    <figcaption class="sheet-foot">Black lines run on their own. The gold loop is the one step I do by hand: my tablet only imports files manually, so I pull in slides, annotate them in class, and export them back for the digest.</figcaption>
   </figure>
 </div>
 
@@ -317,26 +316,6 @@ footer{padding-block:48px 40px;margin-top:40px;border-top:1px solid var(--line);
       </div>
     </article>
 
-    <!-- U-401 under construction -->
-    <article class="wip" id="workout" aria-label="Workout Helper, under construction">
-      <div class="tape" aria-hidden="true"></div>
-      <div class="wip-body">
-        <div class="unit-side">
-          <span class="unit-id">U-401 · IN DESIGN</span>
-          <span class="tag">Under construction</span>
-        </div>
-        <div class="wip-main">
-          <h3>Workout Helper</h3>
-          <p>A personal training assistant that plans workouts around my schedule and logs progress over time. Requirements are being written now; the build comes next.</p>
-          <div class="meter">
-            <span class="tag">Progress · scoping</span>
-            <div class="bar" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" aria-label="Workout Helper progress"><i></i></div>
-          </div>
-          <div class="plan"><span>Scope</span><span>Data model</span><span>Build</span><span>Use for 4 weeks</span><span>Write-up</span></div>
-        </div>
-      </div>
-      <div class="tape" aria-hidden="true"></div>
-    </article>
   </div>
 </section>
 
@@ -372,7 +351,7 @@ footer{padding-block:48px 40px;margin-top:40px;border-top:1px solid var(--line);
 
       <rect class="band main" x="24" y="180" width="712" height="112"/>
       <text class="col" x="40" y="202">ONE HOME FOR EACH KIND OF THING</text>
-      <g class="n-unit"><rect x="40" y="218" width="200" height="60"/><text x="52" y="242" font-weight="600">Google Drive</text><text class="sub" x="52" y="262">course files, notes, study outputs</text></g>
+      <g class="n-unit"><rect x="40" y="218" width="200" height="60"/><text x="52" y="242" font-weight="600">Google Drive</text><text class="sub" x="52" y="262">files, notes, study outputs</text></g>
       <g class="n-unit"><rect x="280" y="218" width="200" height="60"/><text x="292" y="242" font-weight="600">Course Index</text><text class="sub" x="292" y="262">course facts, one file per term</text></g>
       <g class="n-unit"><rect x="520" y="218" width="200" height="60"/><text x="532" y="242" font-weight="600">GitHub</text><text class="sub" x="532" y="262">code, every version kept</text></g>
 
