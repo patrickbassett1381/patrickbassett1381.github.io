@@ -272,7 +272,7 @@ footer{padding-block:48px 40px;margin-top:40px;border-top:1px solid var(--line);
         <div class="psr">
           <div><span class="tag">Problem</span><p>Four courses, four professors, four different ways of posting files. Some posted slides inside lecture pages instead of the Files tab.</p></div>
           <div><span class="tag">Solution</span><p>Two classification modes (mirror the professor's folders, or read lecture pages and modules), a state file so nothing downloads twice, and <b>one daily summary email</b>.</p></div>
-          <div><span class="tag">Result</span><p>Every course file lands in a predictable place within the hour. <b>Nine versions shipped</b>, each one logged in git.</p></div>
+          <div><span class="tag">Result</span><p><b>~380 course files</b> filed automatically in the first module, each within the hour. That replaced <b>~3 hours a week</b> of checking four courses and filing by hand.</p></div>
         </div>
         <p class="decision"><span class="tag">Design decision</span>The university blocks the Google Cloud setup a normal Python script needs. Instead of switching to a personal account, I moved the whole tool into Apps Script, which runs inside Google as me. Constraint first, then the tool.</p>
         <p class="decision"><span class="tag">Human in the loop</span>My reMarkable can only pull files from Drive by hand, so the last step is mine: I import that day's slides before class. The script's job is to make that a two-tap step by putting every file where I expect it.</p>
@@ -292,7 +292,7 @@ footer{padding-block:48px 40px;margin-top:40px;border-top:1px solid var(--line);
         <div class="psr">
           <div><span class="tag">Problem</span><p>My notes were scattered across typed files, a handwriting tablet and class recordings. Nothing connected them at exam time.</p></div>
           <div><span class="tag">Solution</span><p>A nightly sorter with written routing rules. A digest that reads <b>my ink on the slides</b> I annotate in class, plus only <b>what the professor flagged as testable</b> in recordings. Reusable skills turn the logs into prep and cheat sheets.</p></div>
-          <div><span class="tag">Result</span><p>One source of truth per course. Pulling flagged moments instead of full transcripts cut the AI cost of the recording step by <b>about 90%</b>.</p></div>
+          <div><span class="tag">Result</span><p>One source of truth per course. The AI reads only the moments professors flag as testable, <b>a small slice of each transcript</b>, which keeps the recording step cheap.</p></div>
         </div>
         <p class="decision"><span class="tag">Design decision</span>A cheap script gathers and filters; the AI only judges. The sync script builds a nightly queue of new notes, so the AI no longer opens every course log just to check what is missing.</p>
       </div>
@@ -308,9 +308,9 @@ footer{padding-block:48px 40px;margin-top:40px;border-top:1px solid var(--line);
         <h3>Coffee-chat prep</h3>
         <p class="sum">A booking page for recruiting conversations, plus a morning job that researches each person I'm meeting and puts a one-page brief on my calendar five minutes before we talk.</p>
         <div class="psr">
-          <div><span class="tag">Problem</span><p>Recruiting season means many short networking chats. Good prep took real time, so it often got skipped.</p></div>
+          <div><span class="tag">Problem</span><p>Recruiting means many short conversations. I was relying on memory to keep track of who said what and what I meant to ask, and prep often got skipped for people I hadn't met yet.</p></div>
           <div><span class="tag">Solution</span><p>Guests pick Zoom or in person. At 6:45 AM a task reads their booking answers, recent news, past emails and notes, then writes the brief: <b>top three points, a 30-second intro, a closing ask</b>.</p></div>
-          <div><span class="tag">Result</span><p>Every chat starts prepared, and the brief sits next to the meeting notes afterward.</p></div>
+          <div><span class="tag">Result</span><p><b>~30 contacts</b> each have a one-page brief: our past conversations, my open follow-ups and what I want to ask. Every chat starts where the last one left off.</p></div>
         </div>
         <p class="decision"><span class="tag">Design decision</span>One run a day instead of hourly. A 12-hour booking notice and a 6 PM cutoff mean the day's chats are fixed by early morning, so a single run covers everything. It never edits the guest's invite or sends email on my behalf.</p>
       </div>
