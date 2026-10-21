@@ -2,11 +2,17 @@
 
 Source for my personal portfolio site: **https://patrickbassett1381.github.io**
 
-A single static page (`index.html`, no build step) showing the AI automation projects I've built during my Haas MBA:
+Static pages, no build step, showing the AI system I built to run my Haas MBA:
 
-- **bCourses → Google Drive sync** — Apps Script that files course materials hourly ([repo](https://github.com/patrickbassett1381/bcourses-to-drive-sync))
-- **MBA study system** — Claude scheduled tasks and skills that turn notes, slide annotations and lecture recordings into one Concept Log per course
-- **Coffee-chat prep** — morning research briefs for recruiting conversations
+| Page | What it covers |
+|---|---|
+| `index.html` | Overview: the whole system as one process flow sheet, plus where everything lives |
+| `infrastructure.html` | Lane 1: bCourses → Drive sync ([repo](https://github.com/patrickbassett1381/bcourses-to-drive-sync)), notes sorter, Course Index, Drive inbox, term setup, weekly health audit |
+| `study.html` | Lane 2: class prep sheets, Concept Log digest, homework coach, exam kit, weekly class review |
+| `recruiting.html` | Lane 3: coffee-chat prep, fit tracking, resume tailoring, interview drills |
+
+All pages share `styles.css`.
 
 ## Updating the site
-Edit `index.html`, then commit and push to `main`. GitHub Pages republishes in about a minute.
+Edit the page, then commit and push to `main`. GitHub Pages republishes in about a minute.
+Site metrics come from the story bank (Career Coach Project, `Resume/StoryBank_DRAFT.md`): change it there first, then here.

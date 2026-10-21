@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Infrastructure · Pat Bassett</title>
+<meta name="description" content="Lane 1: the data layer under Pat Bassett's MBA AI system: bCourses to Drive sync, notes sorter, Course Index, Drive inbox, term setup and weekly health audit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="top">
+    <a class="tag home" href="index.html">Patrick Bassett · Haas FTMBA '28</a>
+    <nav aria-label="Pages">
+      <a href="index.html">Overview</a>
+      <a href="infrastructure.html" aria-current="page">Infrastructure</a>
+      <a href="study.html">Study system</a>
+      <a href="recruiting.html">Recruiting prep</a>
+      <a href="index.html#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero page-hero">
+  <span class="tag">Lane 1 · Units U-101 to U-106</span>
+  <h1>The data <span>layer</span>.</h1>
+  <p class="lede">Before an AI can help me study, every file and note has to be in a place it can find. This lane does that plumbing: <strong>course files filed within the hour, every class note filed overnight, and one index that tells every tool where things live.</strong> Nothing here asks me to do anything.</p>
+  <div class="facts">
+    <span><b>1</b> script on GitHub</span>
+    <span><b>2</b> scheduled jobs</span>
+    <span><b>1</b> weekly audit</span>
+    <span><b>0</b> jobs allowed to delete</span>
+  </div>
+</div>
+
+<section id="schedule" style="padding-top:24px">
+  <div class="sec-head">
+    <span class="tag">Run sheet</span>
+    <h2>When everything runs</h2>
+    <p>The order matters. The notes sorter finishes before the script builds the nightly queue, so the queue always includes that evening's notes.</p>
+  </div>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Time (Pacific)</th><th>Job</th><th>What happens</th></tr></thead>
+      <tbody>
+        <tr><td class="t">Every hour, :16</td><td>Course file sync</td><td>New bCourses files land in the right Drive folder; Word and PowerPoint files are converted to PDF for my tablet.</td></tr>
+        <tr><td class="t">8:52 PM daily</td><td>Notes sorter</td><td>The day's class and meeting notes are filed as Google Docs.</td></tr>
+        <tr><td class="t">9 PM hour</td><td>Notes queue + summary</td><td>The script lists notes not yet in any Concept Log, and emails me one summary if new files arrived.</td></tr>
+        <tr><td class="t">Thu 9:18 PM</td><td>Concept Log digest</td><td>Reads the queue. <a href="study.html#digest">Lane 2 →</a></td></tr>
+        <tr><td class="t">Sun 4:52 PM</td><td>Weekly review + health audit</td><td>Plans the week and checks that every job above did its work.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="units">
+  <div class="sec-head">
+    <span class="tag">Units</span>
+    <h2>Every unit in this lane</h2>
+  </div>
+  <div class="units">
+
+    <article class="unit" id="sync">
+      <div class="unit-side">
+        <span class="unit-id"><i>U-101</i> · LIVE</span>
+        <p class="when"><b>Runs</b>Every hour, in Google's cloud</p>
+        <div class="stack"><span>Google Apps Script</span><span>JavaScript</span><span>Canvas REST API</span><span>Google Drive</span><span>Git / GitHub</span></div>
+      </div>
+      <div class="unit-main">
+        <h3>bCourses → Google Drive sync</h3>
+        <p class="sum">Checks all my courses every hour, files each new handout, slide deck and assignment into the right Drive folder, and keeps a small tablet folder of Word and PowerPoint files converted to PDF so my reMarkable can open them.</p>
+        <div class="psr">
+          <div><span class="tag">Problem</span><p>Four courses, four professors, four ways of posting files. Some posted slides inside lecture pages instead of the Files tab.</p></div>
+          <div><span class="tag">Solution</span><p>Two filing modes (mirror the professor's folders, or read lecture pages and modules), a keyword fallback with an "Unsorted" folder, and a state file so <b>nothing downloads twice</b>.</p></div>
+          <div><span class="tag">Result</span><p><b>~380 course files</b> filed automatically in the first module, each within the hour. That replaced <b>~3 hours a week</b> of checking four courses and filing by hand.</p></div>
+        </div>
+        <ul class="does">
+          <li><b>A nightly notes queue</b>: the list of notes no Concept Log has read yet, for the study system.</li>
+          <li><b>One summary email</b> a night, and only when something new arrived.</li>
+          <li><b>Each step runs even if another fails</b>, and any failure still triggers an error email.</li>
+          <li><b>New term = new config entries</b>, not new code. Courses drop off after their final.</li>
+        </ul>
+        <p class="decision"><span class="tag">Design decision</span>The university blocks the Google Cloud setup a normal Python script needs. Instead of switching to a personal account, I moved the whole tool into Apps Script, which runs inside Google as me. Constraint first, then the tool.</p>
+        <p class="decision"><span class="tag">Human in the loop</span>My reMarkable can only pull files from Drive by hand, so the last step is mine: I import that day's slides before class. The script's job is to make that a two-tap step.</p>
+        <div class="links"><a href="https://github.com/patrickbassett1381/bcourses-to-drive-sync" target="_blank" rel="noopener">View code on GitHub ↗</a></div>
+      </div>
+    </article>
+
+    <article class="unit" id="sorter">
+      <div class="unit-side">
+        <span class="unit-id"><i>U-102</i> · LIVE</span>
+        <p class="when"><b>Runs</b>Nightly, 8:52 PM</p>
+        <div class="stack"><span>Claude scheduled task</span><span>MCP connectors</span><span>Google Drive</span></div>
+      </div>
+      <div class="unit-main">
+        <h3>Notes sorter</h3>
+        <p class="sum">Every night, takes my class and meeting notes from that day and files each one as a Google Doc in the right place: a lecture goes to that course's notes, a group-project meeting to the project folder, a coffee chat to recruiting, a club meeting to clubs.</p>
+        <ul class="does">
+          <li><b>Written routing rules</b>, with tie-breakers. A club event about jobs goes to recruiting; one about the club itself goes to clubs.</li>
+          <li><b>Looks back seven days</b>, so a missed night is caught by the next run.</li>
+          <li><b>Unclear notes go to a "Needs Review" folder</b> for me, never into a guess.</li>
+          <li><b>Never moves, edits or deletes</b> anything already in Drive.</li>
+        </ul>
+        <p class="decision"><span class="tag">Design decision</span>Each filed Doc carries the note's unique ID in its header. Before filing, the job searches Drive for that ID, so duplicates are impossible without keeping a separate log file. The same ID later tells the Concept Log digest which classes it has already read.</p>
+      </div>
+    </article>
+
+    <article class="unit" id="index">
+      <div class="unit-side">
+        <span class="unit-id"><i>U-103</i> · LIVE</span>
+        <p class="when"><b>Updated</b>Each 7-week term</p>
+        <div class="stack"><span>Google Docs</span></div>
+      </div>
+      <div class="unit-main">
+        <h3>Course Index</h3>
+        <p class="sum">One Google Doc holds every fact about every course: folder locations, class times, exam dates and format, the AI policy, where each professor posts slides, and my role on each team. Every skill and the sync script read it; none keeps its own copy.</p>
+        <p class="decision"><span class="tag">Design decision</span>A few lines in the Index follow a fixed format so the script can read them too. That turns "set up a new term" into editing one document, with no code change.</p>
+      </div>
+    </article>
+
+    <article class="unit" id="inbox">
+      <div class="unit-side">
+        <span class="unit-id"><i>U-104</i> · LIVE</span>
+        <p class="when"><b>Runs</b>On demand: "sort my inbox"</p>
+        <div class="stack"><span>Claude</span><span>Google Drive</span></div>
+      </div>
+      <div class="unit-main">
+        <h3>Drive inbox</h3>
+        <p class="sum">One drop folder for everything that doesn't come from bCourses: saved web PDFs, transcripts, Word files. On request, Claude proposes where each file goes as a table, and moves them after I say OK.</p>
+        <p class="decision"><span class="tag">Design decision</span>Approval first until the rules have held for two weeks of real sorts; then decide whether it earns a nightly schedule. A file with the same name and size as one already in the destination is flagged as a likely duplicate, not moved.</p>
+      </div>
+    </article>
+
+    <article class="unit" id="term">
+      <div class="unit-side">
+        <span class="unit-id"><i>U-105</i> · LIVE</span>
+        <p class="when"><b>Runs</b>Once per term</p>
+        <div class="stack"><span>Claude skill</span><span>bCourses connector</span></div>
+      </div>
+      <div class="unit-main">
+        <h3>New-term setup</h3>
+        <p class="sum">At the start of each term, scans the new courses on bCourses, proposes the Drive folders, drafts each course's Course Index entry, and writes the config snippet the sync script needs. I review it, then paste.</p>
+      </div>
+    </article>
+
+    <article class="unit" id="audit">
+      <div class="unit-side">
+        <span class="unit-id"><i>U-106</i> · LIVE</span>
+        <p class="when"><b>Runs</b>Sundays, inside the weekly review</p>
+        <div class="stack"><span>Claude scheduled task</span><span>Read-only</span></div>
+      </div>
+      <div class="unit-main">
+        <h3>Weekly health audit</h3>
+        <p class="sum">Automation fails quietly, so once a week a read-only check confirms the sorter ran, every note was filed exactly once (flagging MISSING or DUPLICATE), and nothing has sat in the inbox or review folder for more than seven days.</p>
+        <p class="decision"><span class="tag">Design decision</span>The audit rides along with the Sunday review I already read, instead of sending a separate report I would learn to ignore.</p>
+      </div>
+    </article>
+
+  </div>
+  <p class="footnote">Metrics are conservative estimates; method on request.</p>
+</section>
+
+<section id="log">
+  <div class="sec-head">
+    <span class="tag">How I keep it maintainable</span>
+    <h2>Roadmap and decision log</h2>
+    <p>Every design choice above is recorded with its date and reason, and every failure becomes a one-line lesson. When something breaks months later, the log says why it was built that way.</p>
+  </div>
+  <div class="rules">
+    <div class="rule"><h3>IDs, not names</h3><p>Folders are referenced by permanent ID, so renaming or moving a folder never breaks routing.</p></div>
+    <div class="rule"><h3>Code lives in git</h3><p>Local clones stay outside synced drives, because Drive syncing a git folder corrupts it. Tokens and personal data never get committed.</p></div>
+    <div class="rule"><h3>One writer per file</h3><p>Each file has exactly one job allowed to write it. The tablet folder belongs to the script; prep sheets belong to the study system.</p></div>
+    <div class="rule"><h3>Public pages only</h3><p>The sync reads only what students can see on bCourses, never hidden pages.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="next-page">
+    <a href="index.html">← Overview</a>
+    <a href="study.html">Lane 2: Study system →</a>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Patrick Bassett</span>
+  <span>Designed by me, built with Claude as a coding partner.</span>
+</footer>
+</div>
+</body>
+</html>

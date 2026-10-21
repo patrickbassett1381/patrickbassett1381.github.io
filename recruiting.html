@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Recruiting Prep · Pat Bassett</title>
+<meta name="description" content="Lane 3: Pat Bassett's AI recruiting system: coffee-chat briefs, fit tracking, resume tailoring and interview drills.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="top">
+    <a class="tag home" href="index.html">Patrick Bassett · Haas FTMBA '28</a>
+    <nav aria-label="Pages">
+      <a href="index.html">Overview</a>
+      <a href="infrastructure.html">Infrastructure</a>
+      <a href="study.html">Study system</a>
+      <a href="recruiting.html" aria-current="page">Recruiting prep</a>
+      <a href="index.html#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero page-hero">
+  <span class="tag">Lane 3 · Units U-301 to U-305</span>
+  <h1>From fit to <span>offer</span>.</h1>
+  <p class="lede">MBA recruiting is a loop: decide which roles fit, talk to the people in them, tailor a resume to each posting, then interview. I built a unit for each stage. They share one story bank of my experiences and one tracker of where each application stands, so <strong>a fact I confirm once is used everywhere, and nothing is ever invented.</strong></p>
+  <div class="facts">
+    <span><b>3</b> Claude skills</span>
+    <span><b>1</b> weekday job</span>
+    <span><b>3</b> target lanes</span>
+    <span><b>0</b> messages sent on my behalf</span>
+  </div>
+</div>
+
+<section id="loop" style="padding-top:24px">
+  <div class="sec-head">
+    <span class="tag">How it flows</span>
+    <h2>The recruiting loop</h2>
+    <p>My target lanes: energy and climate, semiconductors and hardware, and corporate strategy.</p>
+  </div>
+  <ol class="flow">
+    <li><span class="when">Stage 1</span><b>Find fit</b><p>Which functions and companies match my background.</p><a href="#fit">U-302</a></li>
+    <li><span class="when">Stage 2</span><b>Network</b><p>Coffee chats, each with a brief ready that morning.</p><a href="#chats">U-301</a></li>
+    <li><span class="when">Stage 3</span><b>Apply</b><p>A resume tailored to the posting, checked by a validator.</p><a href="#resume">U-303</a></li>
+    <li><span class="when">Stage 4</span><b>Interview</b><p>Story drills, mock rounds and company prep.</p><a href="#interview">U-304</a></li>
+    <li><span class="when">Stage 5</span><b>Follow through</b><p>Thank-yous and next steps.</p><a href="#follow">U-305</a></li>
+  </ol>
+</section>
+
+<section id="units">
+  <div class="sec-head">
+    <span class="tag">Units</span>
+    <h2>Every unit in this lane</h2>
+  </div>
+  <div class="units">
+
+    <article class="unit" id="chats">
+      <div class="unit-side">
+        <span class="unit-id"><i>U-301</i> · LIVE</span>
+        <p class="when"><b>Runs</b>Weekdays 6:45 AM</p>
+        <div class="stack"><span>Calendly</span><span>Google Calendar</span><span>Gmail</span><span>Web research</span><span>Claude scheduled task</span></div>
+      </div>
+      <div class="unit-main">
+        <h3>Coffee-chat prep</h3>
+        <p class="sum">A booking page where people pick Zoom or in person, plus a morning job that writes a one-page brief for each chat that day and puts it on my calendar five minutes before we talk.</p>
+        <div class="psr">
+          <div><span class="tag">Problem</span><p>Recruiting means many short conversations. I was relying on memory to keep track of who said what and what I meant to ask, and prep often got skipped for people I hadn't met yet.</p></div>
+          <div><span class="tag">Solution</span><p>The brief starts from <b>my own notes on the person</b>: what they shared when booking, past emails and past conversations. Then it adds public background and company news.</p></div>
+          <div><span class="tag">Result</span><p><b>~30 contacts</b> each have a one-page brief: our past conversations, my open follow-ups and what I want to ask. Every chat starts where the last one left off.</p></div>
+        </div>
+        <div class="mock" aria-label="Sample coffee-chat brief, fictional person">
+          <div class="mock-head"><span class="sample">Sample · fictional person</span><span class="tag">Prep brief</span></div>
+          <div class="mock-body">
+            <h4>Prep: Dana Reyes · Director of Strategy, Northfold Storage</h4>
+            <p class="meta">Wed 11:00 AM · Zoom · booked 2 days ago · topic: "moving from consulting into energy storage"</p>
+            <div class="row"><span class="k">Top three</span>
+              <ul><li>Her move from consulting into a storage developer mirrors the path you're exploring.</li><li>Northfold announced a new manufacturing site last month: ask what it changed for strategy.</li><li>You met her briefly at the spring energy panel; she mentioned hiring MBA interns.</li></ul></div>
+            <div class="row"><span class="k">30-second intro</span><p>ChemE, eight years in solar and chemicals strategy, now at Haas focused on energy and climate...</p></div>
+            <div class="row"><span class="k">Closing ask</span><p>Is there one person on her team I should talk to next?</p></div>
+          </div>
+        </div>
+        <p class="decision"><span class="tag">Design decision</span>One run a day instead of hourly. A 12-hour booking notice and a 6 PM cutoff mean the day's chats are fixed by early morning, so a single run covers everything. It never edits the guest's invite and never emails anyone.</p>
+      </div>
+    </article>
+
+    <article class="unit" id="fit">
+      <div class="unit-side">
+        <span class="unit-id"><i>U-302</i> · LIVE</span>
+        <p class="when"><b>Runs</b>When I update a tracker</p>
+        <div class="stack"><span>Claude skill</span><span>Excel</span><span>Google Drive</span></div>
+      </div>
+      <div class="unit-main">
+        <h3>Industry and function fit</h3>
+        <p class="sum">Three hand-kept spreadsheets: a function matrix comparing roles across my target lanes, a recruiting tracker of companies and application status, and a networking list. The AI reads read-only snapshots of them to ground every resume, brief and interview prep.</p>
+        <p class="decision"><span class="tag">Design decision</span>Each spreadsheet has one master in Drive. Changes always flow master → snapshot, never the other way, and every version notes what changed and why inside the file, so there is only ever one live version to trust.</p>
+      </div>
+    </article>
+
+    <article class="unit" id="resume">
+      <div class="unit-side">
+        <span class="unit-id"><i>U-303</i> · LIVE</span>
+        <p class="when"><b>Runs</b>When I paste a job posting</p>
+        <div class="stack"><span>Claude skill</span><span>Node.js</span><span>Python validator</span><span>Google Drive</span></div>
+      </div>
+      <div class="unit-main">
+        <h3>Resume tailoring</h3>
+        <p class="sum">Paste a job posting and it reads the role, picks the strongest bullets from my story bank, and shows me the set it chose, what it cut and the close calls. It stops for my critique, then builds the resume in the school's format from code and runs a validator on it.</p>
+        <ul class="does">
+          <li><b>One folder per application</b>, holding the resume, the posting text (postings disappear), the final bullets and the numbers I must verify before submitting.</li>
+          <li><b>A story bank</b> marks each story READY or GAP. A gap can't supply a number until I fill it in an interview-style session.</li>
+        </ul>
+        <p class="decision"><span class="tag">Honesty floor</span>It never invents, rounds up or "improves" a number. New facts are confirmed with me before they're saved, and confidential details from past jobs stay vague on anything public.</p>
+      </div>
+    </article>
+
+    <article class="unit" id="interview">
+      <div class="unit-side">
+        <span class="unit-id"><i>U-304</i> · LIVE</span>
+        <p class="when"><b>Runs</b>On demand</p>
+        <div class="stack"><span>Claude skill</span><span>Web research</span><span>bCourses alumni search</span></div>
+      </div>
+      <div class="unit-main">
+        <h3>Interview drills</h3>
+        <p class="sum">A practice partner for behavioral interviews, scored against the six-beat storytelling structure taught by Haas career coaches: title, setting, challenge, actions, results, impact. Plus delivery checks: about two minutes, specific moments and numbers, and the balance of "I" and "we."</p>
+        <ul class="does">
+          <li><b>Story drill</b>: a question in the interviewer's words, a scorecard, the single biggest fix, and two hard follow-ups.</li>
+          <li><b>Mock round</b>: five or six questions from a persona for the track, no feedback until the end, and never the same story twice in one loop.</li>
+          <li><b>Pitches</b>: "Tell me about yourself" and "why this company," one version per lane.</li>
+          <li><b>Company prep</b>: what the team needs now, likely questions, which story answers each one, and Haas alumni who work there.</li>
+          <li><b>Recorded-mock review</b>: scores my answers from a recorded practice session, then discards the transcript.</li>
+        </ul>
+        <p class="decision"><span class="tag">Design decision</span>It coaches the beats, not a script. It returns an outline in my own words, so answers stay natural, and it never softens the critique of a weak answer.</p>
+      </div>
+    </article>
+
+    <article class="unit" id="follow">
+      <div class="unit-side">
+        <span class="unit-id next">U-305 · NEXT</span>
+        <p class="when"><b>Status</b>Partly built</p>
+        <div class="stack"><span>Task board</span></div>
+      </div>
+      <div class="unit-main">
+        <h3>Follow-through</h3>
+        <p class="sum">Networking follow-ups already land on my personal task board. Next: a thank-you draft written from each chat's notes, waiting for me to edit and send myself.</p>
+      </div>
+    </article>
+
+  </div>
+  <p class="footnote">Metrics are conservative estimates; method on request.</p>
+</section>
+
+<section id="guardrails">
+  <div class="sec-head">
+    <span class="tag">Guardrails</span>
+    <h2>What this lane will never do</h2>
+  </div>
+  <div class="rules">
+    <div class="rule"><h3>Never contacts anyone</h3><p>No emails, invites or messages go out on my behalf. Drafts wait for me.</p></div>
+    <div class="rule"><h3>Never invents a fact</h3><p>Every claim on a resume or in a pitch traces to a story I confirmed.</p></div>
+    <div class="rule"><h3>Keeps confidences</h3><p>Sensitive details from past employers stay general, in writing and in practice answers.</p></div>
+    <div class="rule"><h3>Stores the minimum</h3><p>Practice transcripts and drill scores are never saved.</p></div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="cta">
+    <p><b>Try the system yourself.</b> Booking a chat with me runs U-301, so I'll show up prepared.</p>
+    <a class="btn" href="https://calendly.com/patrick_bassett-berkeley/coffee-chat" target="_blank" rel="noopener">Book a coffee chat ↗</a>
+  </div>
+</section>
+
+<section>
+  <div class="next-page">
+    <a href="study.html">← Lane 2: Study system</a>
+    <a href="index.html">Overview →</a>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Patrick Bassett</span>
+  <span>Samples on this page are fictional people and companies.</span>
+</footer>
+</div>
+</body>
+</html>
