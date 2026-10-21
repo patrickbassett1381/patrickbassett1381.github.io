@@ -1,4 +1,4 @@
-/* Layout: a process flow sheet. Home = the whole system as one PFD; each pillar page = one lane of it, with every unit drawn out. */
+/* Layout: a process flow sheet. Home = the whole system as one PFD; each area page = one band of it, with every unit drawn out. */
 :root{
   --paper:#eef2f5; --surface:#f9fbfc; --ink:#10233f; --muted:#4c5d72;
   --line:#c3cfda; --grid:rgba(16,35,63,.05);
