@@ -39,7 +39,7 @@
 
 <div class="hero">
   <h1>I build the systems<br>that run my <span>MBA</span>.</h1>
-  <p class="lede">Chemical engineer turned strategy analyst, now automating school and recruiting with AI. I design each workflow, then build it with Claude as a coding partner. <strong>Below is the whole system as one process flow sheet:</strong> three areas, each with its own page that walks through every unit.</p>
+  <p class="lede">Chemical engineer turned strategy analyst, now automating school and recruiting with AI. I design each workflow, then build it with Claude as a coding partner. <strong>It solves three problems:</strong> getting class files where they belong, studying from them, and running a recruiting search alongside a full course load.</p>
   <div class="facts">
     <span><b>3</b> areas</span>
     <span><b>17</b> live units</span>
@@ -48,18 +48,81 @@
     <span><b>v5.5</b> of the sync script</span>
   </div>
 
-  <figure class="sheet" aria-label="Process flow sheet of Pat's AI system">
-    <div class="sheet-head">
-      <span class="tag">Dwg. PFD-001 · Personal AI system</span>
-      <span class="tag">Rev. Oct 2026</span>
-    </div>
-    <div class="sheet-scroll">
+</div>
+
+<section id="areas">
+  <div class="sec-head">
+    <span class="tag">What I built</span>
+    <h2>Three problems, three systems</h2>
+    <p>Each one started as a real problem in my week. Each page shows what every tool does, a sample of what it produces, and the design decisions I'd defend in an interview.</p>
+  </div>
+  <div class="pillars">
+    <article class="pillar">
+      <span class="num">1</span>
+      <h3>Infrastructure</h3>
+      <p class="why"><span class="tag">The problem</span>Course files are spread across bCourses pages, modules and tabs, and my notes live in three apps. Nothing else works if the raw material isn't in the right place.</p>
+      <p><b>What it does:</b> gets every course file and class note into the right Drive folder automatically, so everything downstream can trust it.</p>
+      <ul>
+        <li><b>bCourses → Drive sync</b>: hourly script, code on GitHub</li>
+        <li><b>Notes sorter</b>: files my class notes nightly</li>
+        <li><b>Course Index</b>: one doc holds every course fact</li>
+      </ul>
+      <div class="stack"><span>Google Apps Script</span><span>Canvas REST API</span><span>Drive API</span><span>Git</span></div>
+      <a class="go" href="infrastructure.html">See the infrastructure →</a>
+    </article>
+    <article class="pillar">
+      <span class="num">2</span>
+      <h3>Study system</h3>
+      <p class="why"><span class="tag">The problem</span>Five courses at a time, readings and slides that post late, and exams that reward knowing exactly where I'm weak.</p>
+      <p><b>What it does:</b> turns each class's materials into a one-page brief I bring into the room, then turns my notes into one running Concept Log per course for exam review.</p>
+      <ul>
+        <li><b>Class prep sheets</b>, in four formats</li>
+        <li><b>Concept Log digest</b>: my ink, notes, lecture signals</li>
+        <li><b>Homework coach, exam kit, weekly review</b></li>
+      </ul>
+      <div class="stack"><span>Claude skills</span><span>Scheduled agents</span><span>MCP connectors</span><span>reMarkable</span></div>
+      <a class="go" href="study.html">See the study system →</a>
+    </article>
+    <article class="pillar">
+      <span class="num">3</span>
+      <h3>Recruiting prep</h3>
+      <p class="why"><span class="tag">The problem</span>MBA recruiting starts in week one, alongside a full course load, and every coffee chat, application and interview needs its own prep.</p>
+      <p><b>What it does:</b> covers the loop from fit to offer: which roles fit, who to talk to, a tailored resume per posting, interview practice and follow-through.</p>
+      <ul>
+        <li><b>Coffee-chat briefs</b> on my calendar by 6:45 AM</li>
+        <li><b>Company briefs</b> from earnings calls and filings</li>
+        <li><b>Resume tailoring, interview drills, chat recaps</b></li>
+      </ul>
+      <div class="stack"><span>Calendly</span><span>Google Calendar</span><span>Gmail</span><span>Claude skills</span></div>
+      <a class="go" href="recruiting.html">See recruiting prep →</a>
+    </article>
+  </div>
+  <p class="footnote">Metrics are conservative estimates; method on request.</p>
+</section>
+
+<section id="map">
+  <div class="sec-head">
+    <span class="tag">How it fits together</span>
+    <h2>The full map</h2>
+    <p>The same three systems drawn as one process flow sheet, the way I'd draw a chemical plant. Infrastructure feeds the study system; recruiting runs alongside.</p>
+  </div>
+  <ol class="howto">
+    <li><b>Feed</b><span>What comes in: bCourses, my notes, bookings, job postings.</span></li>
+    <li><b>Unit</b><span>The tool that handles it. Navy boxes, numbered by area.</span></li>
+    <li><b>Product</b><span>What I get back: folders, prep sheets, briefs, resumes.</span></li>
+  </ol>
+<figure class="sheet" aria-label="Process flow sheet of Pat's AI system">
+  <div class="sheet-head">
+    <span class="tag">Dwg. PFD-001 · Personal AI system</span>
+    <span class="tag">Rev. Oct 2026</span>
+  </div>
+  <div class="sheet-scroll">
 <svg viewBox="0 0 800 712" role="img" aria-labelledby="pfd-t">
 <title id="pfd-t">Three areas. Infrastructure: bCourses and my class notes feed the course file sync, notes sorter and Course Index, producing course folders, a tablet library and a nightly notes queue. Study system: course folders, my slide annotations and Panopto feed class prep, the Concept Log digest, homework coach, exam kit and weekly review. Recruiting prep: Calendly bookings, my story bank, job postings, chat notes and company earnings feed coffee-chat prep, fit tracking, resume tailoring, interview drills, follow-through and company briefs.</title>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10z"/></marker></defs>
 <text class="col" x="94.0" y="16" text-anchor="middle">FEED</text>
 <text class="col" x="395.0" y="16" text-anchor="middle">UNIT</text>
-<text class="col" x="711.0" y="16" text-anchor="middle">PRODUCT</text>
+<text class="col" x="688.0" y="16" text-anchor="middle">PRODUCT</text>
 <rect class="lane-band" x="8" y="30" width="784" height="214"/>
 <a href="infrastructure.html"><text class="lane-lbl" x="18" y="45">1 · INFRASTRUCTURE ↗</text></a>
 <g class="n-src"><rect x="24" y="99.0" width="140" height="24"/><text x="94.0" y="115.5" text-anchor="middle">bCourses (Canvas)</text></g>
@@ -71,9 +134,9 @@
 <g class="n-unit"><rect x="300" y="144.0" width="190" height="24"/><text class="id" x="308" y="160.0">U-104</text><text x="350" y="160.5">Drive inbox</text></g>
 <g class="n-unit"><rect x="300" y="174.0" width="190" height="24"/><text class="id" x="308" y="190.0">U-105</text><text x="350" y="190.5">New-term setup</text></g>
 <g class="n-unit"><rect x="300" y="204.0" width="190" height="24"/><text class="id" x="308" y="220.0">U-106</text><text x="350" y="220.5">Health audit</text></g>
-<g class="n-out"><rect x="636" y="99.0" width="150" height="24"/><text x="711.0" y="115.5" text-anchor="middle">Course folders + tablet library</text></g>
-<g class="n-out"><rect x="636" y="129.0" width="150" height="24"/><text x="711.0" y="145.5" text-anchor="middle">Nightly notes queue</text></g>
-<g class="n-out"><rect x="636" y="159.0" width="150" height="24"/><text x="711.0" y="175.5" text-anchor="middle">Sunday health report</text></g>
+<g class="n-out"><rect x="590" y="99.0" width="196" height="24"/><text x="688.0" y="115.5" text-anchor="middle">Course folders + tablet library</text></g>
+<g class="n-out"><rect x="590" y="129.0" width="196" height="24"/><text x="688.0" y="145.5" text-anchor="middle">Nightly notes queue</text></g>
+<g class="n-out"><rect x="590" y="159.0" width="196" height="24"/><text x="688.0" y="175.5" text-anchor="middle">Sunday health report</text></g>
 <path class="edge" d="M164 111.0 H232"/>
 <path class="edge" d="M164 141.0 H232"/>
 <path class="edge" d="M164 171.0 H232"/>
@@ -84,17 +147,17 @@
 <path class="edge" d="M232 156.0 H298" marker-end="url(#arrow)"/>
 <path class="edge" d="M232 186.0 H298" marker-end="url(#arrow)"/>
 <path class="edge" d="M232 216.0 H298" marker-end="url(#arrow)"/>
-<text class="lbl" x="238" y="61.0">hourly</text>
-<path class="edge" d="M490 66.0 H566"/>
-<path class="edge" d="M490 96.0 H566"/>
-<path class="edge" d="M490 126.0 H566"/>
-<path class="edge" d="M490 156.0 H566"/>
-<path class="edge" d="M490 186.0 H566"/>
-<path class="edge" d="M490 216.0 H566"/>
-<path class="edge" d="M566 66.0 V216.0"/>
-<path class="edge" d="M566 111.0 H634" marker-end="url(#arrow)"/>
-<path class="edge" d="M566 141.0 H634" marker-end="url(#arrow)"/>
-<path class="edge" d="M566 171.0 H634" marker-end="url(#arrow)"/>
+<text class="lbl" x="226" y="61.0" text-anchor="end">hourly</text>
+<path class="edge" d="M490 66.0 H548"/>
+<path class="edge" d="M490 96.0 H548"/>
+<path class="edge" d="M490 126.0 H548"/>
+<path class="edge" d="M490 156.0 H548"/>
+<path class="edge" d="M490 186.0 H548"/>
+<path class="edge" d="M490 216.0 H548"/>
+<path class="edge" d="M548 66.0 V216.0"/>
+<path class="edge" d="M548 111.0 H588" marker-end="url(#arrow)"/>
+<path class="edge" d="M548 141.0 H588" marker-end="url(#arrow)"/>
+<path class="edge" d="M548 171.0 H588" marker-end="url(#arrow)"/>
 <rect class="lane-band" x="8" y="258" width="784" height="184"/>
 <a href="study.html"><text class="lane-lbl" x="18" y="273">2 · STUDY SYSTEM ↗</text></a>
 <g class="n-src"><rect x="24" y="312.0" width="140" height="24"/><text x="94.0" y="328.5" text-anchor="middle">Course folders</text></g>
@@ -105,10 +168,10 @@
 <g class="n-unit"><rect x="300" y="342.0" width="190" height="24"/><text class="id" x="308" y="358.0">U-203</text><text x="350" y="358.5">Homework coach</text></g>
 <g class="n-unit"><rect x="300" y="372.0" width="190" height="24"/><text class="id" x="308" y="388.0">U-204</text><text x="350" y="388.5">Exam kit</text></g>
 <g class="n-unit"><rect x="300" y="402.0" width="190" height="24"/><text class="id" x="308" y="418.0">U-205</text><text x="350" y="418.5">Weekly class review</text></g>
-<g class="n-out"><rect x="636" y="297.0" width="150" height="24"/><text x="711.0" y="313.5" text-anchor="middle">Prep sheets</text></g>
-<g class="n-out"><rect x="636" y="327.0" width="150" height="24"/><text x="711.0" y="343.5" text-anchor="middle">Concept Logs</text></g>
-<g class="n-out"><rect x="636" y="357.0" width="150" height="24"/><text x="711.0" y="373.5" text-anchor="middle">Cheat sheets + review decks</text></g>
-<g class="n-out"><rect x="636" y="387.0" width="150" height="24"/><text x="711.0" y="403.5" text-anchor="middle">Sunday plan + team update</text></g>
+<g class="n-out"><rect x="590" y="297.0" width="196" height="24"/><text x="688.0" y="313.5" text-anchor="middle">Prep sheets</text></g>
+<g class="n-out"><rect x="590" y="327.0" width="196" height="24"/><text x="688.0" y="343.5" text-anchor="middle">Concept Logs</text></g>
+<g class="n-out"><rect x="590" y="357.0" width="196" height="24"/><text x="688.0" y="373.5" text-anchor="middle">Cheat sheets + review decks</text></g>
+<g class="n-out"><rect x="590" y="387.0" width="196" height="24"/><text x="688.0" y="403.5" text-anchor="middle">Sunday plan + team update</text></g>
 <path class="edge" d="M164 324.0 H232"/>
 <path class="edge man" d="M164 354.0 H232"/>
 <path class="edge" d="M164 384.0 H232"/>
@@ -118,17 +181,17 @@
 <path class="edge" d="M232 354.0 H298" marker-end="url(#arrow)"/>
 <path class="edge" d="M232 384.0 H298" marker-end="url(#arrow)"/>
 <path class="edge" d="M232 414.0 H298" marker-end="url(#arrow)"/>
-<text class="lbl" x="238" y="289.0">night before</text>
-<path class="edge" d="M490 294.0 H566"/>
-<path class="edge" d="M490 324.0 H566"/>
-<path class="edge" d="M490 354.0 H566"/>
-<path class="edge" d="M490 384.0 H566"/>
-<path class="edge" d="M490 414.0 H566"/>
-<path class="edge" d="M566 294.0 V414.0"/>
-<path class="edge" d="M566 309.0 H634" marker-end="url(#arrow)"/>
-<path class="edge" d="M566 339.0 H634" marker-end="url(#arrow)"/>
-<path class="edge" d="M566 369.0 H634" marker-end="url(#arrow)"/>
-<path class="edge" d="M566 399.0 H634" marker-end="url(#arrow)"/>
+<text class="lbl" x="226" y="289.0" text-anchor="end">night before</text>
+<path class="edge" d="M490 294.0 H548"/>
+<path class="edge" d="M490 324.0 H548"/>
+<path class="edge" d="M490 354.0 H548"/>
+<path class="edge" d="M490 384.0 H548"/>
+<path class="edge" d="M490 414.0 H548"/>
+<path class="edge" d="M548 294.0 V414.0"/>
+<path class="edge" d="M548 309.0 H588" marker-end="url(#arrow)"/>
+<path class="edge" d="M548 339.0 H588" marker-end="url(#arrow)"/>
+<path class="edge" d="M548 369.0 H588" marker-end="url(#arrow)"/>
+<path class="edge" d="M548 399.0 H588" marker-end="url(#arrow)"/>
 <rect class="lane-band" x="8" y="456" width="784" height="214"/>
 <a href="recruiting.html"><text class="lane-lbl" x="18" y="471">3 · RECRUITING PREP ↗</text></a>
 <g class="n-src"><rect x="24" y="495.0" width="140" height="24"/><text x="94.0" y="511.5" text-anchor="middle">Calendly bookings</text></g>
@@ -142,11 +205,11 @@
 <g class="n-unit"><rect x="300" y="570.0" width="190" height="24"/><text class="id" x="308" y="586.0">U-304</text><text x="350" y="586.5">Interview drills</text></g>
 <g class="n-unit"><rect x="300" y="600.0" width="190" height="24"/><text class="id" x="308" y="616.0">U-305</text><text x="350" y="616.5">Follow-through</text></g>
 <g class="n-unit"><rect x="300" y="630.0" width="190" height="24"/><text class="id" x="308" y="646.0">U-306</text><text x="350" y="646.5">Company brief</text></g>
-<g class="n-out"><rect x="636" y="495.0" width="150" height="24"/><text x="711.0" y="511.5" text-anchor="middle">Chat brief on calendar</text></g>
-<g class="n-out"><rect x="636" y="525.0" width="150" height="24"/><text x="711.0" y="541.5" text-anchor="middle">Tailored resume</text></g>
-<g class="n-out"><rect x="636" y="555.0" width="150" height="24"/><text x="711.0" y="571.5" text-anchor="middle">Drill scorecards</text></g>
-<g class="n-out"><rect x="636" y="585.0" width="150" height="24"/><text x="711.0" y="601.5" text-anchor="middle">Recaps + follow-up tasks</text></g>
-<g class="n-out"><rect x="636" y="615.0" width="150" height="24"/><text x="711.0" y="631.5" text-anchor="middle">Saved company briefs</text></g>
+<g class="n-out"><rect x="590" y="495.0" width="196" height="24"/><text x="688.0" y="511.5" text-anchor="middle">Chat brief on calendar</text></g>
+<g class="n-out"><rect x="590" y="525.0" width="196" height="24"/><text x="688.0" y="541.5" text-anchor="middle">Tailored resume</text></g>
+<g class="n-out"><rect x="590" y="555.0" width="196" height="24"/><text x="688.0" y="571.5" text-anchor="middle">Drill scorecards</text></g>
+<g class="n-out"><rect x="590" y="585.0" width="196" height="24"/><text x="688.0" y="601.5" text-anchor="middle">Recaps + follow-up tasks</text></g>
+<g class="n-out"><rect x="590" y="615.0" width="196" height="24"/><text x="688.0" y="631.5" text-anchor="middle">Saved company briefs</text></g>
 <path class="edge" d="M164 507.0 H232"/>
 <path class="edge" d="M164 537.0 H232"/>
 <path class="edge" d="M164 567.0 H232"/>
@@ -159,73 +222,24 @@
 <path class="edge" d="M232 582.0 H298" marker-end="url(#arrow)"/>
 <path class="edge" d="M232 612.0 H298" marker-end="url(#arrow)"/>
 <path class="edge" d="M232 642.0 H298" marker-end="url(#arrow)"/>
-<text class="lbl" x="238" y="487.0">weekdays 6:45 AM</text>
-<path class="edge" d="M490 492.0 H566"/>
-<path class="edge" d="M490 522.0 H566"/>
-<path class="edge" d="M490 552.0 H566"/>
-<path class="edge" d="M490 582.0 H566"/>
-<path class="edge" d="M490 612.0 H566"/>
-<path class="edge" d="M490 642.0 H566"/>
-<path class="edge" d="M566 492.0 V642.0"/>
-<path class="edge" d="M566 507.0 H634" marker-end="url(#arrow)"/>
-<path class="edge" d="M566 537.0 H634" marker-end="url(#arrow)"/>
-<path class="edge" d="M566 567.0 H634" marker-end="url(#arrow)"/>
-<path class="edge" d="M566 597.0 H634" marker-end="url(#arrow)"/>
-<path class="edge" d="M566 627.0 H634" marker-end="url(#arrow)"/>
+<text class="lbl" x="226" y="487.0" text-anchor="end">weekdays 6:45 AM</text>
+<path class="edge" d="M490 492.0 H548"/>
+<path class="edge" d="M490 522.0 H548"/>
+<path class="edge" d="M490 552.0 H548"/>
+<path class="edge" d="M490 582.0 H548"/>
+<path class="edge" d="M490 612.0 H548"/>
+<path class="edge" d="M490 642.0 H548"/>
+<path class="edge" d="M548 492.0 V642.0"/>
+<path class="edge" d="M548 507.0 H588" marker-end="url(#arrow)"/>
+<path class="edge" d="M548 537.0 H588" marker-end="url(#arrow)"/>
+<path class="edge" d="M548 567.0 H588" marker-end="url(#arrow)"/>
+<path class="edge" d="M548 597.0 H588" marker-end="url(#arrow)"/>
+<path class="edge" d="M548 627.0 H588" marker-end="url(#arrow)"/>
 <text class="lbl man-lbl" x="400.0" y="700" text-anchor="middle">GOLD = THE ONE MANUAL STEP · tablet library → I annotate slides in class → export back to the digest</text>
 </svg>
-    </div>
-    <figcaption class="sheet-foot">Read left to right: what comes in, the unit that handles it, what it produces. Area 1 feeds area 2: the course folders and notes queue are the study system's raw material. Tap an area label to open its page. Each numbered box is one tool: 1xx infrastructure, 2xx study, 3xx recruiting.</figcaption>
-  </figure>
-</div>
-
-<section id="areas">
-  <div class="sec-head">
-    <span class="tag">Areas</span>
-    <h2>What I built</h2>
-    <p>Each area started as a real problem in my week. Each page shows the problem, what every unit does, a sample of what it produces, and the design decisions I'd defend in an interview.</p>
   </div>
-  <div class="pillars">
-    <article class="pillar">
-      <span class="unit-id"><i>U-1xx</i> · Infrastructure</span>
-      <h3>The data layer</h3>
-      <p>Gets every course file and class note into the right place without me touching it, so everything downstream can trust it.</p>
-      <ul>
-        <li><b>bCourses → Drive sync</b>: hourly script, code on GitHub</li>
-        <li><b>Notes sorter</b>: files my class notes nightly</li>
-        <li><b>Course Index</b>: one doc holds every course fact</li>
-      </ul>
-      <div class="stack"><span>Google Apps Script</span><span>Canvas REST API</span><span>Drive API</span><span>Git</span></div>
-      <a class="go" href="infrastructure.html">Open 1 · Infrastructure →</a>
-    </article>
-    <article class="pillar">
-      <span class="unit-id"><i>U-2xx</i> · Study system</span>
-      <h3>From class prep to exam day</h3>
-      <p>Turns my prep for each class into a one-page brief I bring into the room, then turns my notes into one running Concept Log per course, so exam review is built around my actual weak spots.</p>
-      <ul>
-        <li><b>Class prep sheets</b>, in four formats</li>
-        <li><b>Concept Log digest</b>: my ink, notes, lecture signals</li>
-        <li><b>Homework coach, exam kit, weekly review</b></li>
-      </ul>
-      <div class="stack"><span>Claude skills</span><span>Scheduled agents</span><span>MCP connectors</span><span>reMarkable</span></div>
-      <a class="go" href="study.html">Open 2 · Study system →</a>
-    </article>
-    <article class="pillar">
-      <span class="unit-id"><i>U-3xx</i> · Recruiting prep</span>
-      <h3>From fit to offer</h3>
-      <p>Covers the whole recruiting loop: which roles fit, who to talk to, a tailored resume per posting, and interview practice scored against a real rubric.</p>
-      <ul>
-        <li><b>Coffee-chat briefs</b> on my calendar by 6:45 AM</li>
-        <li><b>Company briefs</b> from earnings calls and filings</li>
-        <li><b>Fit tracking, resume tailoring</b></li>
-        <li><b>Interview drills</b> and mock rounds</li>
-        <li><b>Chat recaps</b> and follow-through on promises</li>
-      </ul>
-      <div class="stack"><span>Calendly</span><span>Google Calendar</span><span>Gmail</span><span>Claude skills</span></div>
-      <a class="go" href="recruiting.html">Open 3 · Recruiting prep →</a>
-    </article>
-  </div>
-  <p class="footnote">Metrics are conservative estimates; method on request.</p>
+  <figcaption class="sheet-foot">Each numbered box is one tool: 1xx infrastructure, 2xx study, 3xx recruiting. Tap an area label to open its page.</figcaption>
+</figure>
 </section>
 
 <section id="principles">

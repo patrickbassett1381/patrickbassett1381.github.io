@@ -6,7 +6,7 @@ Static pages, no build step, showing the AI system I built to run my Haas MBA:
 
 | Page | What it covers |
 |---|---|
-| `index.html` | Overview: the whole system as one process flow sheet, plus where everything lives |
+| `index.html` | Overview: the three areas (problem, what it does, key tools) first, then the full process flow sheet and where everything lives |
 | `infrastructure.html` | Lane 1: bCourses → Drive sync ([repo](https://github.com/patrickbassett1381/bcourses-to-drive-sync)), notes sorter, Course Index, Drive inbox, term setup, weekly health audit |
 | `study.html` | Lane 2: class prep sheets, Concept Log digest, homework coach, exam kit, weekly class review |
 | `recruiting.html` | Lane 3: coffee-chat prep, fit tracking, resume tailoring, interview drills, follow-through, company briefs |

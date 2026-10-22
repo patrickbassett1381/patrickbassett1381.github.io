@@ -90,14 +90,24 @@ section{padding-block:56px 8px}
 .sec-head h2{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:750;font-stretch:112%}
 .sec-head p{color:var(--muted)}
 
-/* Pillar cards (home) */
+/* Pillar cards (home): the three problems, shown before the full map */
 .pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.pillar{display:grid;gap:14px;align-content:start;border-top:2px solid var(--ink);padding-top:16px;min-width:0}
-.pillar h3{font-size:1.45rem;font-weight:750;font-stretch:108%}
+.pillar{display:grid;gap:14px;align-content:start;border:1px solid var(--line);border-top:3px solid var(--unit);background:var(--surface);padding:20px;min-width:0}
+.pillar .num{font:800 2.6rem/1 var(--display);font-stretch:118%;color:var(--accent)}
+.pillar h3{font-size:1.6rem;font-weight:750;font-stretch:108%}
 .pillar p{color:var(--muted);font-size:.97rem}
+.pillar p b{color:var(--ink);font-weight:600}
+.pillar .why{color:var(--ink);border-left:3px solid var(--gold);padding-left:12px}
+.pillar .why .tag{display:block;margin-bottom:4px}
 .pillar ul{font-size:.93rem;color:var(--muted)}
 .pillar li b{color:var(--ink);font-weight:600}
-.pillar .go{font:500 13px var(--mono)}
+.pillar .go{font:500 13px var(--mono);margin-top:auto}
+
+/* How to read the map */
+.howto{list-style:none;padding:0;margin:0 0 20px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;counter-reset:h}
+.howto li{margin:0;display:grid;gap:2px;padding-left:34px;position:relative;font-size:.93rem;color:var(--muted);min-width:0}
+.howto li::before{counter-increment:h;content:counter(h);position:absolute;left:0;top:2px;width:24px;height:24px;display:grid;place-items:center;background:var(--unit);color:var(--unit-ink);font:500 12px var(--mono)}
+.howto b{font:700 1rem var(--display);color:var(--ink)}
 
 /* Units */
 .unit-id{display:inline-block;justify-self:start;background:var(--unit);color:var(--unit-ink);font:500 12px var(--mono);letter-spacing:.06em;padding:6px 9px}
@@ -182,7 +192,7 @@ button:hover{background:var(--ink);color:var(--paper)}
 footer{padding-block:48px 40px;margin-top:40px;border-top:1px solid var(--line);font:400 12px var(--mono);color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 
 @media (max-width:860px){
-  .pillars{grid-template-columns:1fr}
+  .pillars,.howto{grid-template-columns:1fr}
 }
 @media (max-width:760px){
   .unit,.about{grid-template-columns:1fr;gap:14px}
