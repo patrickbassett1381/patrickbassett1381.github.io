@@ -13,6 +13,8 @@ Static pages, no build step, showing the AI system I built to run my Haas MBA:
 
 All pages share `styles.css`.
 
+**Link previews:** each page's `<head>` has Open Graph tags (`og:title`, `og:description`, `og:url`, `og:image`) so a shared link shows as a card on LinkedIn, Slack and iMessage. All pages use `og-image.png` (1200×630). When you add a page, copy that block and change the title, description and URL. After changing it, re-scrape the link in LinkedIn's Post Inspector (LinkedIn caches previews for ~7 days).
+
 ## Updating the site
 Edit the page, then commit and push to `main`. GitHub Pages republishes in about a minute.
 Site metrics come from the story bank (Career Coach Project, `Resume/StoryBank_DRAFT.md`): change it there first, then here.
