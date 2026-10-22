@@ -38,7 +38,7 @@
 </header>
 
 <div class="hero page-hero">
-  <span class="tag">3 · Recruiting prep · Units U-301 to U-306</span>
+  <span class="tag">3 · Recruiting prep · Units U-301 to U-307</span>
   <h1>From fit to <span>offer</span>.</h1>
   <p class="lede">MBA recruiting is a loop: decide which roles fit, talk to the people in them, tailor a resume to each posting, then interview. I built a unit for each stage. They share one story bank of my experiences and one tracker of where each application stands, so <strong>a fact I confirm once is used everywhere, and nothing is ever invented.</strong></p>
   <div class="facts">
@@ -57,7 +57,7 @@
   </div>
   <ol class="flow">
     <li><span class="when">Stage 1</span><b>Find fit</b><p>Which functions and companies match my background.</p><a href="#fit">U-302</a></li>
-    <li><span class="when">Stage 2</span><b>Network</b><p>Coffee chats, each with a brief ready that morning, plus what each company is busy with now.</p><a href="#chats">U-301</a><a href="#company">U-306</a></li>
+    <li><span class="when">Stage 2</span><b>Network</b><p>Coffee chats, each with a brief ready that morning, plus what each company is busy with now.</p><a href="#finder">U-307</a><a href="#chats">U-301</a><a href="#company">U-306</a></li>
     <li><span class="when">Stage 3</span><b>Apply</b><p>A resume tailored to the posting, checked by a validator.</p><a href="#resume">U-303</a></li>
     <li><span class="when">Stage 4</span><b>Interview</b><p>Story drills, mock rounds and company prep.</p><a href="#interview">U-304</a></li>
     <li><span class="when">Stage 5</span><b>Follow through</b><p>Promised next steps, so nothing slips.</p><a href="#follow">U-305</a></li>
@@ -175,6 +175,23 @@
         <h3>Company brief</h3>
         <p class="sum">Scans a company's last four quarters of earnings releases, calls and filings, flags what changed (new risks, new costs, shifts in emphasis), and maps its policy and regulatory exposures to my own experience. Briefs are saved and reused until the company's next earnings date, so every coffee chat or interview starts from what the company is busy with right now.</p>
         <p class="decision"><span class="tag">Design decision</span>Numbers come from the company's own release, never from summary sites, and a change in its risk language only counts when something else backs it up: a new cost line, the filing or the call.</p>
+      </div>
+    </article>
+
+    <article class="unit" id="finder">
+      <div class="unit-side">
+        <span class="unit-id"><i>U-307</i> · LIVE</span>
+        <p class="when"><b>Runs</b>On demand, a tab on my recruiting plan</p>
+        <div class="stack"><span>Claude artifact</span><span>MCP connector</span><span>Google Drive</span><span>JavaScript</span></div>
+      </div>
+      <div class="unit-main">
+        <h3>Chat finder</h3>
+        <p class="sum">Who should I ask for a coffee chat next? One searchable list of about 1,680 people, merged from my networking list, the Haas internship spreadsheet and my LinkedIn connections. Filters for industry, function, how I know them, class year, pre-MBA background and location narrow it down, and "best fit" ranks people in the three metros I can see myself living in higher.</p>
+        <ul class="does">
+          <li><b>One person, one row</b>: the same person in all three files is merged by name, so their internship, current job and pre-MBA path show together.</li>
+          <li><b>Tags, not hand-labels</b>: industry and function are inferred from employer and title, and anything unclear lands in "Other" for me to check.</li>
+        </ul>
+        <p class="decision"><span class="tag">Design decision</span>The page reads the files live from my Drive through a connector instead of keeping a copy, so it always matches the masters and only I can load the data.</p>
       </div>
     </article>
 
