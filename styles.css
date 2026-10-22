@@ -36,7 +36,9 @@ li+li{margin-top:4px}
 /* Header */
 header{padding-block:28px 0}
 .top{display:flex;justify-content:space-between;align-items:center;gap:12px 16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:14px}
-.top .home{text-decoration:none}
+.top .home{text-decoration:none;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.top .home b{font:800 1.35rem/1.1 var(--display);font-stretch:112%;letter-spacing:-.01em;color:var(--ink)}
+.top .home:hover b{color:var(--accent)}
 .top nav{display:flex;gap:6px 18px;flex-wrap:wrap}
 .top nav a{font:500 13px var(--mono);text-decoration:none;color:var(--muted);padding-block:2px}
 .top nav a:hover{color:var(--ink)}
@@ -72,7 +74,10 @@ header{padding-block:28px 0}
 .edge.man{stroke:var(--accent);stroke-width:1.5;stroke-dasharray:6 4}
 .lbl{font-family:var(--mono)!important;font-size:10px!important;fill:var(--muted)!important}
 .col{font-family:var(--mono)!important;font-size:10px!important;letter-spacing:.1em;fill:var(--muted)!important}
-.lane-lbl{font-family:var(--mono)!important;font-size:10px!important;letter-spacing:.08em;fill:var(--accent)!important;font-weight:500}
+.lane-lbl{font-family:var(--display)!important;font-size:17px!important;font-weight:750;font-stretch:108%;fill:var(--ink)!important}
+.lane-lbl .n{fill:var(--accent)}
+.lane-lbl .go{font-size:13px;fill:var(--accent)}
+.sheet a:hover .lane-lbl{fill:var(--accent)!important;text-decoration:underline}
 .lane-lbl a{text-decoration:underline}
 .man-lbl{fill:var(--accent)!important}
 #arrow path{fill:var(--ink)}
